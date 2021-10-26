@@ -18,9 +18,9 @@ export default function ButtonBox() {
     }
 
     return (
-        <div className="btn-container" >
-            <button className="btn" onClick={startAndStop} >{timerStatus ? "Stop" : "Start"}</button>
-            <button className="btn" onClick={resetWatch} >Reset</button>
+        <div className="btn-container start" >
+            <button className={`btn ${timerStatus ? "btn-red" : "btn-green"}`} onClick={startAndStop} >{timerStatus ? "Stop" : "Start"}</button>
+            <button className="btn btn-black" onClick={resetWatch} >Reset</button>
         </div>
     )
 }
